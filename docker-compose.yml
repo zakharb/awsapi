@@ -12,13 +12,10 @@ services:
       - DATABASE_URI=postgresql://db_username:db_password@db/db_dev
     depends_on:
        - db
-    logging:
-        driver: none 
   
   frontend:
     build: ./frontend
     volumes:
-      - /app/node_modules
       - ./frontend/:/app/
     depends_on:
        - db

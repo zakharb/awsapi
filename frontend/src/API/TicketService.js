@@ -19,7 +19,7 @@ export default class TicketService {
 	}
 
 	static async postTicket(ticket) {
-		const response = axios.post('http://localhost:8080/api/v1/tickets/', {
+		const response = axios.post('/api/v1/tickets/', {
 		    name: ticket.name,
 		    description: ticket.description
 		  })
